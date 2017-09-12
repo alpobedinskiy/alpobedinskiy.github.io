@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Open Sans Semibold; /* Имя шрифта */
+    src: url(fonts/open-sans-semibold.ttf); /* Путь к файлу со шрифтом */
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;	
+}
+header{
+	width: 100%;
+	height: 785px;
+	background-image: url(images/header.jpg);
+	background-size: cover;	
+}
+nav.main{
+	position: relative;
+	width: 1000px;
+	height: 180px;
+	margin: 0 auto;
+    background: #ffffff;	
+}
+ul>li>a{
+	color: white;
+	text-decoration: none;
+	font-family: Open Sans Semibold, Arial;
+	font-size: 11pt;
+}
+nav.main ul{
+    position: absolute;
+    bottom: 0;	
+	list-style: none;
+	clear: both;
+	height: 55px;
+	width: 100%;
+	background: #232020;
+}
+nav.main ul li{
+	float: left;
+	padding:15px;
+	transition: all 0.3s
+}
+nav.main ul li:hover{
+	border-bottom: 3px solid #f17398;
+}
