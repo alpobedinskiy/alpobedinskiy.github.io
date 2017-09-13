@@ -1,6 +1,10 @@
 @font-face {
     font-family: Open Sans Semibold; /* Имя шрифта */
     src: url(fonts/open-sans-semibold.ttf); /* Путь к файлу со шрифтом */
+	font-family: Open Sans Light; /* Имя шрифта */
+    src: url(fonts/open-sans-light.ttf); /* Путь к файлу со шрифтом */
+	font-family: Open Sans; /* Имя шрифта */
+    src: url(fonts/open-sans.ttf); /* Путь к файлу со шрифтом */
 }
 * {
 	margin: 0;
@@ -39,9 +43,33 @@ nav.main ul{
 }
 nav.main ul li{
 	float: left;
-	padding:15px;
-	transition: all 0.3s
+	padding: 15px;	
 }
 nav.main ul li:hover{
 	border-bottom: 3px solid #f17398;
+}
+
+/* Header Contacts */
+
+div.header-contact{
+	position:absolute;
+	width:600px;
+	height:90px;
+	top:38px;
+	left:400px;
+}
+div.header-contact div{
+	float:left;
+	width: 200px;
+    height: 100%;	
+}
+div.header-contact div p{
+	color:#797f7f;
+	font-family: Open Sans Light, Arial;
+	font-size: 15px;
+} 
+div.header-contact div span{
+	color:#2f343a;
+	font-family: Open Sans, Arial;
+	font-size: 15px;
 }
