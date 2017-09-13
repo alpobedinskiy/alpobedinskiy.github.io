@@ -53,23 +53,33 @@ nav.main ul li:hover{
 
 div.header-contact{
 	position:absolute;
-	width:600px;
+	width:660px;
 	height:90px;
-	top:38px;
-	left:400px;
+	top:50px;
+	left:340px;	
 }
 div.header-contact div{
 	float:left;
-	width: 200px;
-    height: 100%;	
+	width: 215px;
+    height: 100%;
+    margin-right:5px;	
+}
+div.header-contact div img, div.header-contact div p, div.header-contact div span{
+	float:left;
+}
+div.header-contact div img{
+	padding-right: 5px;
 }
 div.header-contact div p{
+	position:relative;
 	color:#797f7f;
 	font-family: Open Sans Light, Arial;
 	font-size: 15px;
+	width:170px;
+    bottom:3px;   	
 } 
 div.header-contact div span{
 	color:#2f343a;
 	font-family: Open Sans, Arial;
-	font-size: 15px;
+	font-size: 14px;	
 }
