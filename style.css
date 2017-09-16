@@ -1,3 +1,4 @@
+@charset "utf-8";
 @font-face {
     font-family: Open Sans Semibold; /* Имя шрифта */
     src: url(fonts/open-sans-semibold.ttf); /* Путь к файлу со шрифтом */
@@ -5,6 +6,8 @@
     src: url(fonts/open-sans-light.ttf); /* Путь к файлу со шрифтом */
 	font-family: Open Sans; /* Имя шрифта */
     src: url(fonts/open-sans.ttf); /* Путь к файлу со шрифтом */
+	font-family: Open Sans Bold; /* Имя шрифта */
+    src: url(fonts/open-sans-bold.ttf); /* Путь к файлу со шрифтом */
 }
 * {
 	margin: 0;
@@ -21,7 +24,7 @@ header{
 }
 nav.main{
 	position: relative;
-	width: 1000px;
+	width: 80%;
 	height: 180px;
 	margin: 0 auto;
     background: #ffffff;	
@@ -29,7 +32,7 @@ nav.main{
 ul>li>a{
 	color: white;
 	text-decoration: none;
-	font-family: Open Sans Semibold, Arial;
+	font-family: Open Sans Semibold;
 	font-size: 11pt;
 }
 nav.main ul{
@@ -43,7 +46,8 @@ nav.main ul{
 }
 nav.main ul li{
 	float: left;
-	padding: 15px;	
+	margin: 15px 15px 15px 20px;
+    padding-bottom: 15px;	
 }
 nav.main ul li:hover{
 	border-bottom: 3px solid #f17398;
@@ -73,13 +77,178 @@ div.header-contact div img{
 div.header-contact div p{
 	position:relative;
 	color:#797f7f;
-	font-family: Open Sans Light, Arial;
+	font-family: Open Sans Light;
 	font-size: 15px;
 	width:170px;
     bottom:3px;   	
 } 
 div.header-contact div span{
 	color:#2f343a;
-	font-family: Open Sans, Arial;
+	font-family: Open Sans;
 	font-size: 14px;	
 }
+
+/* End Header Contacts */
+
+/* Begin Header Aside */
+
+header>aside{
+	position: absolute;
+	top: 360px;
+	margin-left: 10%;
+	width: 465px;
+	height: 170px;
+	background: #ffffff;
+	padding:20px;	
+	opacity:0.8;
+} 
+header>aside>h1{
+	font-family: Open Sans;
+	font-size: 22px;	
+    margin-bottom: 30px;
+    color: #484c51;	
+}
+header>aside>p{
+	font-family: Open Sans Light;
+	font-size: 16px;	
+	float:left;
+	color: #a2a6a6;
+}
+button{
+	width: 118px;
+	height: 35px;
+	background: #f17398;
+	border:none;
+	border-bottom:3px solid #db577e;
+	font:12px Open Sans Bold;
+	color: #ffffff;
+	transition: all 0.2s;
+    outline:none;
+	cursor:pointer;
+}
+header>aside+button{
+	position: absolute;
+	top:570px;
+	margin-left: 10%;
+}
+
+/* End Header Aside */
+
+/* Begin form of Search Categories */
+
+#all-categories{
+	position: absolute;
+	top: 745px;
+	margin-left: 10%;
+}
+#all-categories input[type="submit"] {
+	background: url(images/icons/search-all.png) no-repeat #121111;
+	width:40px;
+	height:40px;
+	border:0px;
+}
+#all-categories input[type="search"] {
+	background: #232020;
+	height:40px;
+	width:250px;
+    color: #ffffff;	
+	font: 16px Open Sans Bold;
+	padding:11px 11px 8px 25px;
+	float: right;
+	border: 0px;
+}
+placeholder    {
+	color:#ffffff;
+	}
+input-placeholder {color:#ffffff;}
+::-webkit-input-placeholder {color:#ffffff;}
+::-moz-placeholder  {color:#ffffff;}/* Firefox 19+ */
+:-ms-input-placeholder    {color:#ffffff;}
+/* End form of Search Categories */
+
+/* Begin Main Form */
+
+form#filter-search{
+	width:1100px;
+	height:190px;
+	margin: 25px 0 20px 130px;
+}
+
+.select, .color {
+  position: relative;
+  display: inline-block;
+  height:30px;    
+   float:left;
+   margin:10px 20px 50px 20px;
+}
+select {
+	color:#b3b3b3;
+	font: 15px Open Sans;
+	padding: 0px 0px 0px 10px; 
+}
+select option{
+	padding: 0px 0px 0px 10px; 
+}
+.select{
+	width: 225px;
+}
+.color {
+	width: 205px;	 
+ }
+.color:after {
+	 content: "APPLY" ;
+	 padding: 7px;
+  font-size: 10px;
+  position: relative;
+  left:0px;
+  top:-28px;
+  float:right;
+  z-index: 1;
+  text-align: center;
+  height: 26px;
+  pointer-events: none;
+  box-sizing: border-box; 
+  background: #f1f2f2;
+  border:2px solid #b3b3b3;
+  border-bottom:none;
+  border-top:none;
+ }
+.select:after {
+  content: url(images/icons/arrow.png) ;  
+  padding: 7px;
+  font-size: 10px;
+  position: relative;
+  left:0px;
+  top:-28px;
+  float:right;
+  z-index: 1;
+  text-align: center;
+  height: 26px;
+  pointer-events: none;
+  box-sizing: border-box; 
+  background: #f1f2f2;
+  border:2px solid #b3b3b3;
+  border-bottom:none;
+  border-top:none;
+}
+
+.select select, .color select {
+    height:30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;    
+    border: 2px solid #b3b3b3;
+}
+.color select{
+	 width: 205px;
+}
+.select select{
+      width: 225px;
+}
+label.select span, label.color span{
+	float: left;
+    font: 18px Open Sans Semibold, Arial; 	
+	padding:12px;
+	color: #2f343a;
+}
+/* End Main Form */

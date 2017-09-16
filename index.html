@@ -8,9 +8,10 @@
    <meta name="viewport" content="width=device-width,initial-scale=1">
       <title>First layout</title>
    <meta name="description" content="First layout">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css">      
   <head>
 <body>
+
   <header>
   
     <nav class='main'>
@@ -47,6 +48,67 @@
 	  
 	</nav>	
 	
-  </header>
+	<aside>
+	  <h1>Your beautiful handcrafted stock photography marketplace.</h1>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis tortor non ipsum condimentum molestie...</p> 
+	</aside>
+	
+	<button>KNOW MORE</button>
+	
+	<form id='all-categories'>
+       <input type="submit" value="">
+	   <input name="q" type="search" placeholder="SEARCH ALL GALLERIES">      
+    </form>
+	
+  </header> 
+  
+  <form id = "filter-search">
+     <label class="select"><span>Categories</span>
+         <select>
+            <option value="">Architecture</option>
+            <option value="">Animals</option>
+            <option value="">Live</option>
+            <option value="">Flight</option>
+         </select>
+     </label>
+	 <label class="select"><span>License Type</span>
+         <select>
+            <option value="">Creative</option>
+            <option value="">OEM License</option>            
+         </select>
+     </label>
+	 <label class="select"><span>Image Size</span>
+         <select>
+            <option value="">XXXL</option>
+            <option value="">XXL</option>
+            <option value="">XL</option>
+            <option value="">L</option>
+         </select>
+     </label>
+	 <label class="color"><span>Color</span>
+         <select>
+            <option value="">HEX    #F6546A</option>
+            <option value="">HEX    #FFFFFF</option>
+            <option value="">HEX    #F2434F</option>
+            <option value="">HEX    #CCCCCC</option>
+         </select>
+     </label>
+	 <label class="select"><span>Browse</span>
+         <select>
+            <option value="">Most Viewed</option>           
+         </select>
+     </label>
+	 <label class="select"><span>Location</span>
+         <select>
+            <option value="">Worldwide</option>
+            <option value="">City</option>
+            <option value="">Village</option>
+            <option value="">Country</option>
+         </select>
+     </label>
+
+  </form>
+  
+   <script src="js/scriptForLayout.js"></script>
 </body>
 </html>
