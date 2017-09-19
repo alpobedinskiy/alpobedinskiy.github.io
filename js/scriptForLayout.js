@@ -7,3 +7,16 @@ document.body.onmousedown = function(event) {
     target.style.borderBottomWidth = 3 + 'px'
     }
 };
+
+var adult = document.querySelector(".adult");
+ 	   adult.children[2].onclick = function() {
+		  if (this.classList.contains("active")) return;
+		  	this.className = "active"; 
+			adult.children[1].className = ""
+		}
+adult.children[1].onclick = function() {
+		  if (this.classList.contains("active")) return;
+		  	this.className = "active"; 
+			adult.children[2].className = ""
+		}  		
+  

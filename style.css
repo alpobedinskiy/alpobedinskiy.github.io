@@ -174,7 +174,7 @@ form#filter-search{
 	margin: 25px 0 20px 130px;
 }
 
-.select, .color {
+.select, .color, .adult{
   position: relative;
   display: inline-block;
   height:30px;    
@@ -195,21 +195,26 @@ select option{
 .color {
 	width: 205px;	 
  }
+.adult{
+	width:180px;
+} 
 .color:after {
 	 content: "APPLY" ;
 	 padding: 7px;
-  font-size: 10px;
+	 color: #2f343a;
+	 
+  font: 10px Open Sans Semibold;
   position: relative;
   left:0px;
-  top:-28px;
+  top:-29px;
   float:right;
   z-index: 1;
   text-align: center;
-  height: 26px;
+  height: 28px;
   pointer-events: none;
   box-sizing: border-box; 
   background: #f1f2f2;
-  border:2px solid #b3b3b3;
+  border:1px solid #b3b3b3;
   border-bottom:none;
   border-top:none;
  }
@@ -219,36 +224,108 @@ select option{
   font-size: 10px;
   position: relative;
   left:0px;
-  top:-28px;
+  top:-29px;
   float:right;
   z-index: 1;
   text-align: center;
-  height: 26px;
+  height: 28px;
   pointer-events: none;
   box-sizing: border-box; 
   background: #f1f2f2;
-  border:2px solid #b3b3b3;
+  border:1px solid #b3b3b3;
   border-bottom:none;
   border-top:none;
 }
 
-.select select, .color select {
+.select select, .color select, .adult input {
     height:30px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;    
-    border: 2px solid #b3b3b3;
+    border: 1px solid #b3b3b3;	
 }
+.adult input {
+	width:90px;
+	background:#ffffff;
+	transition: all 0.3s;
+}
+.adult input.active{
+	background: #2f343a;
+	color: #ffffff;
+	border:1px solid #2f343a;
+} 
 .color select{
 	 width: 205px;
 }
 .select select{
       width: 225px;
 }
-label.select span, label.color span{
+label.select span, label.color span, label.adult span{
 	float: left;
     font: 18px Open Sans Semibold, Arial; 	
 	padding:12px;
 	color: #2f343a;
 }
+ #filter-search button{
+	 float: left;
+	 position:relative;
+	 top:52px;
+	 width: 250px;
+	 left: 20px;
+ }
 /* End Main Form */
+
+article{
+	float:left;
+	width:100%;
+	text-align: center;
+	margin: 0 0 105px 0;
+}
+article h2{
+	font: 25px Open Sans, Arial;
+	color:#2f343a;
+    margin: 50px 0 40px 0;	
+}
+article p{
+	font: 18px Open Sans, Arial;
+	color:#2f343a;
+    width:71%;
+margin-left: 14%;
+}
+
+/* Use Flexbox CSS */
+#collage{
+	width:1100px;
+	height:520px;
+	margin:0 auto;    	
+}
+#collage h2{
+	font: 30px Open Sans;
+	color:#2f343a;
+	text-align:center;
+	margin: 0 0 60px 0;
+}
+div.flex-container{
+	display: flex;
+	display: -webkit-flex;
+    flex-flow:row nowrap;
+	-webkit-flex-flow:row nowrap;
+    justify-content:center;
+    -webkit-justify-content:center;	
+}
+div.flex-element-odd {
+	display: flex;
+	display: -webkit-flex;
+    flex-flow:column nowrap;
+	-webkit-flex-flow:column nowrap;	
+}
+div.flex-element-even{
+	display: flex;
+	display: -webkit-flex;
+    flex-flow:row nowrap;
+	-webkit-flex-flow:row nowrap;
+}
+div.flex-container div img{
+	padding:5px;
+}
+/* End Flexbox CSS */
