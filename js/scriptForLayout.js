@@ -13,10 +13,38 @@ var adult = document.querySelector(".adult");
 		  if (this.classList.contains("active")) return;
 		  	this.className = "active"; 
 			adult.children[1].className = ""
-		}
+};
 adult.children[1].onclick = function() {
 		  if (this.classList.contains("active")) return;
 		  	this.className = "active"; 
 			adult.children[2].className = ""
-		}  		
+};  		
+
+var flex = document.querySelector(".flex-container");
+    this.onmouseover = function(e) {
+		var target = e.target;
+		   
+		if (target.tagName != 'IMG') return;
+		
+		var span = document.createElement("span");
+		var p = document.createElement("p");
+				
+		span.innerHTML = target.getAttribute("title");
+		p.innerHTML = target.getAttribute("alt");	
+		
+		target.after(p);    
+		target.after(span);        
+		 					
+		this.onmouseout =  function() {
+			p.className = "hover-out";
+			span.className = "hover-out";
+           			
+			setInterval( function(){
+			p.remove();
+            span.remove();
+            } , 400);			
+        }	
+	}
+ 
+  
   

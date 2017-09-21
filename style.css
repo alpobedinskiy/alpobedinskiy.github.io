@@ -8,6 +8,10 @@
     src: url(fonts/open-sans.ttf); /* Путь к файлу со шрифтом */
 	font-family: Open Sans Bold; /* Имя шрифта */
     src: url(fonts/open-sans-bold.ttf); /* Путь к файлу со шрифтом */
+	font-family: Open Sans Italic; /* Имя шрифта */
+    src: url(fonts/open-sans-italic.ttf); /* Путь к файлу со шрифтом */
+	font-family: Open Sans Extrabold; /* Имя шрифта */
+    src: url(fonts/open-sans-extrabold.ttf); /* Путь к файлу со шрифтом */
 }
 * {
 	margin: 0;
@@ -293,31 +297,38 @@ article p{
 margin-left: 14%;
 }
 
-/* Use Flexbox CSS */
+
 #collage{
 	width:1100px;
 	height:520px;
 	margin:0 auto;    	
 }
-#collage h2{
+#collage h2,.stock-photography h2, .{
 	font: 30px Open Sans;
 	color:#2f343a;
 	text-align:center;
 	margin: 0 0 60px 0;
 }
+#collage button{
+	float:right;
+	margin:10px 4.3em 105px 0;
+}
+
+/* Use Flexbox CSS */
 div.flex-container{
 	display: flex;
 	display: -webkit-flex;
     flex-flow:row nowrap;
 	-webkit-flex-flow:row nowrap;
     justify-content:center;
-    -webkit-justify-content:center;	
+    -webkit-justify-content:center;
+    height: 400px;	
 }
 div.flex-element-odd {
 	display: flex;
 	display: -webkit-flex;
     flex-flow:column nowrap;
-	-webkit-flex-flow:column nowrap;	
+	-webkit-flex-flow:column nowrap;		
 }
 div.flex-element-even{
 	display: flex;
@@ -325,7 +336,66 @@ div.flex-element-even{
     flex-flow:row nowrap;
 	-webkit-flex-flow:row nowrap;
 }
-div.flex-container div img{
+ div img{
 	padding:5px;
 }
+@keyframes movehover{
+	0%{
+		opacity:0;		
+	}
+	100%{
+		opacity:0.6;
+		width:93%;
+	}
+}
+div.flex-element-odd img+span, div.flex-element-odd img+span+p{
+	 position:relative;
+	 left:6px;
+	 background: #666666;
+	 margin:0px;
+	 padding:0px 0px 0px 10px;
+	 color: #ffffff;
+	 opacity:0.6;
+	 width:93%;
+	 animation: movehover 0.5s ease-in;
+	 transition: all 0.5s;
+}
+div.flex-element-odd img+span{	 
+	 bottom:23px;	
+     font:15px Open Sans Italic;	 
+ }
+ div.flex-element-odd img+span+p{
+   bottom:65px;
+   font:17px Open Sans;
+ }
+div.flex-element-odd img+span+p.hover-out, div.flex-element-odd img+span.hover-out{
+	opacity:0;
+	left:200px;
+}
 /* End Flexbox CSS */
+
+.stock-photography{
+	float:left;
+	display:block;
+	height: 585px;
+	width:100%;
+}
+.stock-photography article{
+	background: url(images/stock-photo.jpg);
+	background-size: cover;
+	width:100%;
+	height:490px;   	
+}
+.stock-photography h3, .stock-photography p, .stock-photography button{
+	text-align:center;
+	color:#ffffff;
+}
+.stock-photography h3{
+	font: 50px Open Sans Extrabold;	
+	margin:120px 0 57px 0;
+}
+.stock-photography p{
+	font: 18px Open Sans;	
+	margin:0 auto 62px auto;
+}
+
