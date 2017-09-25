@@ -21,7 +21,7 @@ adult.children[1].onclick = function() {
 };  		
 
 var flex = document.querySelector(".flex-container");
-    this.onmouseover = function(e) {
+    flex.onmouseover = function(e) {
 		var target = e.target;
 		   
 		if (target.tagName != 'IMG') return;
@@ -35,7 +35,7 @@ var flex = document.querySelector(".flex-container");
 		target.after(p);    
 		target.after(span);        
 		 					
-		this.onmouseout =  function() {
+		flex.onmouseout =  function() {
 			p.className = "hover-out";
 			span.className = "hover-out";
            			
@@ -44,7 +44,31 @@ var flex = document.querySelector(".flex-container");
             span.remove();
             } , 400);			
         }	
-	}
+	};
+
+/* конфигурация */
+    var width = 117; // ширина изображения
+    var count = 2; // количество изображений
+
+    var carousel = document.body.querySelector('.our-sponsors_slider');
+    var list = carousel.querySelector('ul');
+    var listElems = carousel.querySelectorAll('li');
+
+    var position = 0; // текущий сдвиг влево
+
+    carousel.querySelector('#prev').onclick = function() {
+      // сдвиг влево
+      // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
+      position = Math.min(position + width * count, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('#next').onclick = function() {
+      // сдвиг вправо
+      // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
+      position = Math.max(position - width * count, -width * (listElems.length - count));
+      list.style.marginLeft = position + 'px';
+    };
  
   
   

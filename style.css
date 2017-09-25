@@ -173,17 +173,23 @@ input-placeholder {color:#ffffff;}
 /* Begin Main Form */
 
 form#filter-search{
-	width:1100px;
+	width:90%;
 	height:190px;
-	margin: 25px 0 20px 130px;
+    display: flex;
+	display: -webkit-flex;
+    flex-flow:row wrap;
+	-webkit-flex-flow:row wrap;
+    justify-content:center;
+    -webkit-justify-content:center;
+	margin-bottom:10px;
 }
 
 .select, .color, .adult{
-  position: relative;
-  display: inline-block;
-  height:30px;    
-   float:left;
-   margin:10px 20px 50px 20px;
+  /* position: relative; */
+    /* display: inline-block; */
+    height: 30px;
+    /* float: left; */
+    margin: 10px 5px 50px 5px;
 }
 select {
 	color:#b3b3b3;
@@ -275,7 +281,7 @@ label.select span, label.color span, label.adult span{
 	 position:relative;
 	 top:52px;
 	 width: 250px;
-	 left: 20px;
+	 left: 10px;
  }
 /* End Main Form */
 
@@ -303,7 +309,7 @@ margin-left: 14%;
 	height:520px;
 	margin:0 auto;    	
 }
-#collage h2,.stock-photography h2, .{
+#collage h2,.stock-photography h2{
 	font: 30px Open Sans;
 	color:#2f343a;
 	text-align:center;
@@ -398,4 +404,171 @@ div.flex-element-odd img+span+p.hover-out, div.flex-element-odd img+span.hover-o
 	font: 18px Open Sans;	
 	margin:0 auto 62px auto;
 }
+/* Our customers */
 
+section.our-customers{
+    display:block;	
+	float:left;
+	width:100%;
+	position:relative;
+	top:60px;
+}
+#our-customers_flexbox{
+	display: flex;
+	display: -webkit-flex;
+    flex-flow:row nowrap;
+	-webkit-flex-flow:row nowrap;
+    justify-content:center;
+    -webkit-justify-content:center;
+    height:230px;	
+}
+.our-customers_answer{
+	width: 500px;
+}
+
+.our-customers_answer p{
+	width:400px;
+	margin:0 5px 70px 5px;
+	color:#adafb0;
+	font:18px Open Sans Light;
+	text-align:justify;
+}
+.our-customers_answer p:before {
+    color: #ffffff;
+    content: "“";
+    background:#f17398;
+    border-radius:1.8rem;
+	display:block;
+    width:3rem;
+    height:3rem;
+    text-align:center;	
+    font-size: 4rem;    	
+    margin-right: 1rem;    
+	position:relative;
+	right:55px;
+	top:30px;
+	line-height: 4.6rem;
+	vertical-align: -.4em;
+}
+#second p:before {
+       background:#3eaaf5;
+}
+.our-customers_answer span{
+	color:#2f343a;
+	font:15px Open Sans;
+	text-transform:uppercase;
+}
+.our-customers_answer span+img{
+	float:right;
+	position:relative;
+	right: 70px;
+	bottom:30px
+}
+.our-sponsors{
+	display:block;	
+	height:200px;
+	width:90%;
+	float:left;	
+	margin: 60px 5% 0 5%;
+	position: relative;
+}
+.our-customers h2, .our-sponsors h2, .our-team h2{
+	font: 30px Open Sans;
+	color:#2f343a;
+	text-align:center;	
+} 
+.our-customers h2{
+	margin: 70px 0 0 0;
+}
+.our-sponsors h2, .our-team h2{
+	margin: 110px 0 30px 0;
+}
+.our-sponsors_slider{
+	width: 750px;
+    overflow: hidden;
+	position: relative;
+	margin:0 auto;
+	
+}
+ul.our-sponsors_slider_box{
+	display:block;
+	width: 9999px;
+	list-style:none;	
+	padding: 0 0 0 30px;
+	transition: margin-left 250ms;	
+}
+ul.our-sponsors_slider_box li{
+	display:inline-block;
+}
+#prev, #next{
+	 position: absolute;
+  top: 23px;
+  padding: 0;  
+   display: block;
+   width:35px;
+   height:35px;
+   background-size:cover;
+   outline: none;
+   cursor:pointer;      
+}
+#prev{
+	background: url(images/buttons/prev.jpg) no-repeat;
+	left:0px;	
+}
+#next{
+	background: url(images/buttons/next.jpg) no-repeat;
+	right:0px;
+}
+ul.our-sponsors_slider_box img{
+   height:75px;
+  /* по умолчанию inline, в ряде браузеров это даст лишнее пространство вокруг элементов */
+
+  display: block;
+}
+.our-team{
+	float:left;
+	width:100%;
+	height:550px;
+}
+.our-team_flexbox{
+	display:flex;
+	display:-webkit-flex;
+	flex-flow:row nowrap;
+	-webkit-flex-flow:row nowrap;
+    justify-content:center;
+    -webkit-justify-content:center;    
+}
+.our-team_flexbox_elem{
+	width:315px;
+	margin-right:20px;
+}
+figcaption{
+	font:30px Open Sans Semibold;
+	padding-left:3px;
+}
+figure span{
+	font:italic 16px Open Sans;
+	color:#96979a;
+}
+.our-team_flexbox_elem p{
+	font: 16px Open Sans Light;
+	color:#706f6f;
+	text-align:justify;
+	margin:25px 0 40px 0;
+	line-height:23px;
+}
+.social-icons{	
+	position:relative;	
+	float:left;
+}
+.social-icons img{	    
+	padding-right:5px;
+	width:47px;
+	height:47px;	   	
+}
+.maps{
+	float:left;
+	width:100%;
+	position:relative;
+	top:200px;;
+}
