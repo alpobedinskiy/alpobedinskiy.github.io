@@ -76,7 +76,7 @@ div.header-contact div img, div.header-contact div p, div.header-contact div spa
 	float:left;
 }
 div.header-contact div img{
-	padding-right: 5px;
+	padding: 0 5px 0 0;
 }
 div.header-contact div p{
 	position:relative;
